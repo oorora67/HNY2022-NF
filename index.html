@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>HAPPY・NEW・YEAR 2022</title>
+    <link rel="stylesheet" href="Design.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="screen1">
+            <img src="./image/101802.png" class="bg">
+            <div class="text0">
+                <svg viewBox="0 0 350 50">
+        <text class="text0-1" width="350" height="50" x="50%" y="45%" text-anchor="middle" dominant-baseline="central">謹　賀　新　年</text>
+        <!--
+        <rect x="0" y="0" width="350" height="50" fill="none" stroke="#12b886"></rect>
+        <line x1="50" y1="0" x2="50" y2="50" stroke="Green" stroke-width="1"/>
+        <line x1="100" y1="0" x2="100" y2="50" stroke="Green" stroke-width="1"/>
+        <line x1="150" y1="0" x2="150" y2="50" stroke="Green" stroke-width="1"/>
+        <line x1="200" y1="0" x2="200" y2="50" stroke="Green" stroke-width="1"/>
+        <line x1="250" y1="0" x2="250" y2="50" stroke="Green" stroke-width="1"/>
+        <line x1="300" y1="0" x2="300" y2="50" stroke="Green" stroke-width="1"/>
+        -->
+      </svg>
+            </div>
+            <div class="text1">
+                <svg viewBox="0 0 200 200">
+        <text id="text1-1" class="text1-1" x="50%" y="45%" text-anchor="middle" dominant-baseline="central">寅</text>
+        <!--
+        <rect x="0" y="0" width="200" height="200" fill="none" stroke="#12b886"></rect>
+        <line x1="0" y1="100" x2="200" y2="100" stroke="Green" stroke-width="1"/>
+        <line x1="100" y1="0" x2="100" y2="200" stroke="Green" stroke-width="1"/>
+        -->
+      </svg>
+            </div>
+            <div class="text2">
+                <svg viewBox="0 0 400 90">
+        <text class="text2-1" x="50%" y="50%">
+          <tspan x="50%" y="20" text-anchor="middle" dominant-baseline="central">新年あけましておめでとうございます</tspan>
+          <tspan x="50%" y="45" text-anchor="middle" dominant-baseline="central">昨年は大変お世話になりました</tspan>
+          <tspan x="50%" y="70" text-anchor="middle" dominant-baseline="central">本年も何卒よろしくお願い申し上げます</tspan>
+        </text>
+        <!--
+        <rect x="0" y="0" width="400" height="90" fill="none" stroke="#12b886"></rect>
+        -->
+      </svg>
+            </div>
+            <div class="text3">
+                <svg viewBox="0 0 400 40">
+        <text class="text3-1" x="50%" y="50%">
+          <tspan x="60%" y="18" text-anchor="middle" dominant-baseline="central">令和四年　元日</tspan>
+        </text>
+        <!--
+        <rect x="0" y="0" width="400" height="40" fill="none" stroke="#12b886"></rect>
+        -->
+      </svg>
+            </div>
+            <div class="obj0">
+                <img src="./image/stamp-handle-name_green.png" class="obj0-1">
+                <!--
+      <svg viewBox="0 0 500 500">
+        <text class="obj0-1" x="50%" y="50%">
+          <tspan x="50%" y="220" text-anchor="middle" dominant-baseline="central">印</tspan>
+        </text>
+        <rect x="0" y="0" width="500" height="500" fill="none"stroke-width="3" stroke="chartreuse"></rect>
+      </svg>
+      -->
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const resizeFix = function() {
+                var css_pc = document.createElement("link");
+                css_pc.setAttribute("rel", "stylesheet");
+                css_pc.setAttribute("type", "text/css");
+                css_pc.setAttribute("href", "./Design-pc.css");
+                var css_sp = document.createElement("link");
+                css_sp.setAttribute("rel", "stylesheet");
+                css_sp.setAttribute("type", "text/css");
+                css_sp.setAttribute("href", "./Design-sp.css");
+                const checkHeight = window.innerWidth / 1920 * 1080;
+                const marginTop = window.innerHeight - checkHeight;
+                const checkWidth = window.innerHeight / 1080 * 1920;
+                const marginLeft = window.innerWidth - checkWidth;
+
+                if (window.innerWidth > window.innerHeight) { //
+                    document.getElementsByTagName("head")[0].appendChild(css_pc);
+                } else {
+                    document.getElementsByTagName("head")[0].appendChild(css_sp);
+                }
+            }
+            resizeFix();
+            window.addEventListener('resize', function() {
+                resizeFix();
+            });
+        });
+    </script>
+</body>
+
+</html>
